@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar navbar-light bg-light p-3 border-bottom">
+      <%= link_to 'Wikinimous', articles_path %>
+      <%= link_to 'New article', new_article_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
